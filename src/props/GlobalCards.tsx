@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { StringLiteralType } from "typescript";
 
 interface iCards {
   icons: string;
