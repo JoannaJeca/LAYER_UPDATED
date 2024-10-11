@@ -153,6 +153,7 @@ const Heading = styled.div`
   h1 {
     text-transform: uppercase;
     font-size: 36px;
+    text-align: center;
     margin-bottom: 5px;
     span {
       color: #e74c3c;

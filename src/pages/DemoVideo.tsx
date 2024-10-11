@@ -91,6 +91,7 @@ const Heading = styled.div`
     text-transform: uppercase;
     font-size: 36px;
     color: white;
+    text-align: center;
     margin-bottom: 5px;
     span {
       color: #e74c3c;

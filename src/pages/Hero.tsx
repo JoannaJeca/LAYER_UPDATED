@@ -97,7 +97,6 @@ const Left = styled.div`
     @media screen and (max-width: 425px) {
       width: 100%;
       font-size: 56px;
-      background-color: pink;
     }
     span {
       color: #e74c3c;

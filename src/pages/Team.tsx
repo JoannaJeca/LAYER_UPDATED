@@ -14,7 +14,7 @@ const Team = () => {
         <Wrapper>
           <Heading>
             <h1>
-              App <span>News</span>
+              THE <span>TEAM</span>
             </h1>
             <Rope>
               <div />

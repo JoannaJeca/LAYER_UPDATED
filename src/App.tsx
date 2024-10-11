@@ -13,7 +13,7 @@ function App() {
     setTimeout(() => {
       loadRef.current.style.display = "none";
       ShowRef.current.style.display = "block";
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (

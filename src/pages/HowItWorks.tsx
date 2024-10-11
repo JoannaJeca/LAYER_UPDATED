@@ -1,11 +1,9 @@
 import styled from "styled-components";
 import backPic from "../assets/small-screen.png";
 import frontPic from "../assets/big-screen.png";
-// import GlobalButton from "../props/GlobalButton";
-import { FaRegBell } from "react-icons/fa6";
-import { FaRegMessage } from "react-icons/fa6";
-import { FaRegHeart } from "react-icons/fa6";
-import { FaRegStar } from "react-icons/fa6";
+import GlobalHIW from "../props/GlobalHIW";
+
+import { BiBell, BiHeart, BiMessage, BiStar } from "react-icons/bi";
 
 const HIW = () => {
   return (
@@ -36,65 +34,48 @@ const HIW = () => {
               </p>
             </Heading>
             <Body>
-              <h1 className="font-semibold text-[19px] mb-6">
-                Benefits Of App
-              </h1>
-              <Holder>
-                <Hold>
-                  <IconTab lg="#e74c3c, purple">
-                    <FaRegBell />
-                  </IconTab>
-
-                  <TxtHold>
-                    <h2 className="font-semibold">Notifications</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet, sed do consectetur adipisicing
-                      elit.
-                    </p>
-                  </TxtHold>
-                </Hold>
-                <Hold>
-                  <IconTab lg="darkblue, blue">
-                    {" "}
-                    <FaRegStar />
-                  </IconTab>
-                  <TxtHold>
-                    <h2 className="font-semibold">Favourites</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet, sed do consectetur adipisicing
-                      elit.
-                    </p>
-                  </TxtHold>
-                </Hold>
-              </Holder>
-              <Holder>
-                <Hold>
-                  <IconTab lg="orangered, orange">
-                    <FaRegMessage />
-                  </IconTab>
-
-                  <TxtHold>
-                    <h2 className="font-semibold">24/7 Support</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet, sed do consectetur adipisicing
-                      elit.
-                    </p>
-                  </TxtHold>
-                </Hold>
-                <Hold>
-                  <IconTab lg="#e74c3c, purple">
-                    <FaRegHeart />
-                  </IconTab>
-                  <TxtHold>
-                    <h2 className="font-semibold">Wishlist</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet, sed do consectetur adipisicing
-                      elit.
-                    </p>
-                  </TxtHold>
-                </Hold>
-              </Holder>
-              <Button>Learn more</Button>
+              <Benefits>
+                <B>Benefits Of App</B>
+                <Components>
+                  <div
+                    style={{ margin: "0", display: "flex", flexWrap: "wrap" }}
+                  >
+                    <GlobalHIW
+                      Licon={BiBell}
+                      Ltext="Notifications"
+                      Stext="Lorem ipsum dolor sit amet, sed do consectetur adipisicing elit."
+                      left="#bc5bddff"
+                      right="#ed56bcff"
+                    />
+                    <GlobalHIW
+                      Licon={BiMessage}
+                      Ltext="24/7 Support"
+                      Stext="Lorem ipsum dolor sit amet, sed do consectetur adipisicing elit."
+                      left="#f1386aff"
+                      right="#fb6351ff"
+                    />
+                  </div>
+                  <div
+                    style={{ margin: "0", display: "flex", flexWrap: "wrap" }}
+                  >
+                    <GlobalHIW
+                      Licon={BiStar}
+                      Ltext="Favourites"
+                      Stext="Lorem ipsum dolor sit amet, sed do consectetur adipisicing elit."
+                      left="#8584e8ff"
+                      right="#61c2e5ff"
+                    />
+                    <GlobalHIW
+                      Licon={BiHeart}
+                      Ltext="Wishlist"
+                      Stext="Lorem ipsum dolor sit amet, sed do consectetur adipisicing elit."
+                      left="#bc5bddff"
+                      right="#ed56bcff"
+                    />
+                  </div>
+                </Components>
+                <Button>Learn More</Button>
+              </Benefits>
             </Body>
           </Right>
         </Wrapper>
@@ -104,6 +85,26 @@ const HIW = () => {
 };
 // eslint-disable-next-line react-refresh/only-export-components
 export default HIW;
+
+const B = styled.h1`
+  margin: 20px 0 0 0;
+  font-weight: semibold;
+  font-size: 19px;
+`;
+
+const Components = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 30px;
+`;
+
+const Benefits = styled.div`
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+`;
 
 const Button = styled.button`
   width: 140px;
@@ -124,61 +125,24 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const TxtHold = styled.div`
-  width: 75%;
-  h2 {
-    margin-bottom: 6px;
-    font-size: 15px;
-  }
-  p {
-    margin-top: 4px;
-  }
-`;
-const IconTab = styled.div<{ lg?: string }>`
-  width: 60px;
-  height: 60px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-top-left-radius: 50px;
-  // margin-right:15px;
-  background-image: linear-gradient(to bottom, ${({ lg }) => lg});
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  color: white;
-  font-size: 25px;
-  &:hover {
-    rotate: 180deg;
-  }
-`;
-
-const Hold = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 47%;
-  margin-bottom: 20px;
-  // background-color:blue;
-  @media screen and @media screen and (max-width: 768px) {
-    width: 100%;
-    // display: block;
-  }
-`;
-
-const Holder = styled.div`
-  width: 100%;
-  display: flex;
-  // background-color: pink;
-  justify-content: space-between;
-  margin-bottom: 15px;
-  @media screen and @media screen and (max-width: 768px) {
-    width: 100%;
-    display: flex;
-    flex-wrap: Wrap;
-  }
-`;
-
+// const IconTab = styled.div<{ lg?: string }>`
+//   width: 60px;
+//   height: 60px;
+//   border-top-right-radius: 50px;
+//   border-bottom-left-radius: 50px;
+//   border-top-left-radius: 50px;
+//   // margin-right:15px;
+//   background-image: linear-gradient(to bottom, ${({ lg }) => lg});
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   z-index: 1;
+//   color: white;
+//   font-size: 25px;
+//   &:hover {
+//     rotate: 180deg;
+//   }
+// `;
 const Body = styled.div`
   h1 {
     margin-top: 12px;

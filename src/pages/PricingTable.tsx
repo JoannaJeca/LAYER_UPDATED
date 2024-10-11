@@ -104,9 +104,10 @@ const Heading = styled.div`
     color: rgba(0, 0, 0, 0.7);
     text-align: center;
     margin-top: 8px;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 450px) {
       font-size: 13px;
       text-align: center;
+      width: 90%;
     }
   }
   margin-bottom: 10px;
